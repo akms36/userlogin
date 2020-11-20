@@ -14,19 +14,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
 import { setUserSession } from '../Utils/Common';
+import LOGO from "../ASSETS/A.png"
+import MainGrid from "../ASSETS/gridview.png"
 
-// function Copyright() {
-//   return (
-//     // <Typography variant="body2" color="textSecondary" align="center">
-//     //   {'Copyright © '}
-//     //   <Link color="inherit" href="https://material-ui.com/">
-//     //     Your Website
-//     //   </Link>{' '}
-//     //   {new Date().getFullYear()}
-//     //   {'.'}
-//     // </Typography>
-//   );
-// }
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -92,17 +83,23 @@ const useStyles = makeStyles((theme) => ({
     
   
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root} >
       <CssBaseline />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square >
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
+          {/* <Avatar className={classes.avatar}> */}
+            {/* <LockOutlinedIcon /> */}
+            {/* <LOGO/> */}
+          {/* </Avatar> */}
+
+         
+          <form className={classes.form} noValidate >
+            
+          <img src={LOGO} alt="LOGO"  style={{paddingBottom:"1rem"}} />
+
+          <Typography component="h1" variant="h4" style={{paddingBottom:"1rem"}}>
           Log in to your account
           </Typography>
-          <form className={classes.form} noValidate>
             <TextField
               variant="outlined"
               margin="normal"
@@ -133,6 +130,7 @@ const useStyles = makeStyles((theme) => ({
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            
             <Button
               type="submit"
               fullWidth
@@ -162,8 +160,11 @@ const useStyles = makeStyles((theme) => ({
           </form>
         </div>
       </Grid>
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <Grid item xs={false} sm={4} md={7} className={classes.image} >
 
+      <img src={MainGrid} alt="MainGrid"   />
+      
+</Grid>
     </Grid>
   );}
   // const useFormInput = initialValue => {
