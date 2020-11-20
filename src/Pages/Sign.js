@@ -162,7 +162,7 @@ const useStyles = makeStyles((theme) => ({
       </Grid>
       <Grid item xs={false} sm={4} md={7} className={classes.image} >
 
-      <img src={MainGrid} alt="MainGrid"   />
+      <img src={MainGrid} alt="MainGrid" style={{width:"100%",height:"100%"}}   />
       
 </Grid>
     </Grid>
